@@ -15,7 +15,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 
-const drawerWidth = 260;
+const drawerWidth = 290;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,6 +79,10 @@ const useStyles = makeStyles((theme) => ({
     background: "#d6d6d6",
     marginTop: "50px",
     maxWidth: 345,
+  },
+
+  radioText: {
+    color: "#3f50b5",
   },
 }));
 
