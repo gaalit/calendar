@@ -47,8 +47,6 @@ export default function Months({ classes }) {
       ) : (
         ""
       )}
-      {/* <Calendar onChange={onChange} value={date} />
-      {console.log(date)} */}
     </div>
   );
 }
