@@ -7,6 +7,13 @@ import {
   Dialog,
   DialogActions,
 } from "@material-ui/core";
+import Radio from "@material-ui/core/Radio";
+import DeleteIcon from "@material-ui/icons/Delete";
+
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
 
 import AccessTime from "@material-ui/icons/AccessTime";
 import Card from "@material-ui/core/Card";
@@ -65,7 +72,7 @@ export default function DrawerRight(props) {
 
   return (
     <Drawer
-      className={props.classes.drawer}
+      className={props.classes.drawerRight}
       variant="permanent"
       classes={{
         paper: props.classes.drawerPaper,
@@ -128,7 +135,7 @@ export default function DrawerRight(props) {
       {/* DISPLAY OF SELECTED TIME SLOT */}
       {/* if value is not equal to the initial state (i.e: time has changed) */}
       {value !== "00:00" ? (
-        <Card className={props.classes.selectedTimeSlot}>
+        <Card id={value} className={props.classes.selectedTimeSlot}>
           <CardActionArea>
             <CardContent>
               <Typography gutterBottom variant="h6" component="h2">
@@ -140,11 +147,29 @@ export default function DrawerRight(props) {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-            <Button size="small" color="primary">
-              Learn More
+            {/* REOCURRING? */}
+            <FormControl component="fieldset">
+              <RadioGroup
+                row
+                aria-label="position"
+                name="position"
+                defaultValue="top"
+              >
+                <FormControlLabel
+                  className={props.classes.radioText}
+                  value="end"
+                  control={<Radio color="primary" />}
+                  label="Reoccurring"
+                />
+              </RadioGroup>
+            </FormControl>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={props.classes.buttonFormating}
+              startIcon={<DeleteIcon />}
+            >
+              Delete
             </Button>
           </CardActions>
         </Card>
