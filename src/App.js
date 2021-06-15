@@ -60,7 +60,25 @@ const useStyles = makeStyles((theme) => ({
     margin: "7.5% 0 0 40%",
   },
   timeSelectorFormatting: {
-    marginTop: "60px",
+    marginTop: "80px",
+  },
+  container: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200,
+  },
+  media: {
+    height: 140,
+  },
+
+  selectedTimeSlot: {
+    background: "#d6d6d6",
+    marginTop: "50px",
+    maxWidth: 345,
   },
 }));
 
