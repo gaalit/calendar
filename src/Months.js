@@ -1,4 +1,3 @@
-import Calendar from "react-calendar";
 import DrawerRight from "./DrawerRight";
 import React, { useState } from "react";
 
@@ -10,11 +9,6 @@ import {
 } from "@material-ui/pickers";
 
 export default function Months({ classes }) {
-  // const [date, setDate] = useState(new Date());
-  // const onChange = (date) => {
-  //   setDate(date);
-  // };
-
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [toggle, setToggle] = useState(false);
 
@@ -43,6 +37,7 @@ export default function Months({ classes }) {
         <DrawerRight
           selectedDate={selectedDate}
           classes={classes}
+          toggle={toggle}
         ></DrawerRight>
       ) : (
         ""
