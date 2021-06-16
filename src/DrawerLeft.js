@@ -5,14 +5,7 @@ import Avatar from "@material-ui/core/Avatar";
 import AvatarImg from "../src/assets/avatar.jpeg";
 import "../src/App.css";
 import Button from "@material-ui/core/Button";
-import { purple } from "@material-ui/core/colors";
-
-import List from "@material-ui/core/List";
-
 import Divider from "@material-ui/core/Divider";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
 
 export default function DrawerLeft({ classes }) {
   return (
